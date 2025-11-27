@@ -3,22 +3,61 @@ body{
     box-sizing: border-box;
     margin: 0;
     background-color: #1c3042;
+    font-family: "Cinzel" ,serif;
 }
 
 .title{
+    position: relative;
     margin: 0;
     background-image: url("espada_piedra.png");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed; 
     height: 220px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
+.title::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0, 0, 0);
+    transition: background 0.3 ease;
+}
+
+.title:hover::after{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 h1{
+    position: relative;
+    z-index: 1;
     margin: auto;
-    padding-top: 70px;
+    padding-top: 50px;
     color: #d4af37;
     text-align: center ;
     font-size: 3rem;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d9d9d9;
+    font-size: 2rem;
+}
+
+
+.button{
+    position: relative;
+    z-index: 1;
+    margin: 10px;
+    padding: 5px;
+    background-color: #b22222;
+    color: #fff;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #4da3ff;
 }
 .container{
     display: grid;
@@ -29,7 +68,7 @@ h1{
     width: 70%;
     margin: auto;    
     border-radius: 10px;
-    background-color: #2a3a4f;
+    background-color: #c4a234;
 }
 .parag, picture{
     margin: 10px;
@@ -41,46 +80,161 @@ h1{
 p{
     text-align: justify;
     font-size: 1.5rem;
-    color: #e6e6e6;
+    color: #d9d9d9;
 }
-
-
-
 
 .picture{
     padding: 20PX;
     background-image: url("unnamed.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    
-}
-.picture::after {
-    
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0);
-    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.picture:hover::after {
-    background: rgba(0,0,0,0.4);
-}
 
 .curiosities{
     display: grid;
     grid-template-columns: minmax(300px, 1fr);
      margin: auto;
     margin-top: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     width: 70%;
     text-align: center;
     align-items: self-end;
-    background-color: #2a3a4f;
+    background-color: #c4a234;
+    border-radius: 10px;
 }
-li{
-    color: #e6e6e6;
+
+    details{
+    background-color: var(--faq-bg);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    cursor: pointer;
+    border-left: 4px solid var(--accent);
+}
+
+/* Cuando se abre */
+details[open]{
+    max-height: 400px;
+}
+
+/* Animación del contenido */
+details[open] .content{
+    animation: aparecer 0.7s both;
+}
+
+summary{
+    position: relative;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    user-select: none;
+}
+summary::marker{
+    content: "";
+}
+/* Símbolo + y - */
+summary::before{
+    content: '+';
+    position: absolute;
+    right: 0;
+    color: #d9d9d9;
+    font-weight: 900;
+}
+
+details[open] summary::before{
+    content: '-';
+}
+.container-2{
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #d9d9d9;
     font-size: 1.5rem;
     text-align: justify;
-    list-style: none;
+}
+/* Animación suave */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 600px){
+    .curiosidades{
+        max-width: clamp(300px, 60%, 800px);
+    }
+}
+
+@media (max-width: 600px){
+
+    h1{
+        font-size: 2rem;
+        padding-top: 30px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.1rem;
+    }
+    /* El grid principal se convierte en 1 columna */
+    .container{
+        grid-template-columns: 1fr;
+        width: 90%;
+        padding: 5px;
+    }
+    /* Imagen más pequeña */
+    .picture{
+        height: 250px;
+        background-size: cover;
+    }
+    /* Curiosidades */
+    .curiosities{
+        width: 90%;
+    }
+    summary{
+        font-size: 1.2rem;
+    }
+    .container-2{
+        font-size: 1.2rem;
+    }
+    /* Header más bajo */
+    .title{
+        height: 160px;
+        background-position: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+    
+    .container{
+        grid-template-columns: 1fr 1fr;
+        width: 85%;
+    }
+    .curiosities{
+        width: 85%;
+    }
+    p, .container-2{
+        font-size: 1.3rem;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 901px){
+    .container, .curiosities{
+        width: 70%;
+    }
 }
