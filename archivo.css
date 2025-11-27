@@ -1,0 +1,93 @@
+/* --- styles.css --- */
+
+/* Importamos la fuente elegante para los títulos */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Segoe+UI&display=swap');
+
+/* --- 1. Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111f2bfd; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    /* Rejilla automática */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px; 
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* --- 2. Estructura de la Tarjeta --- */
+.tarjeta {
+    background-color: transparent;
+    height: 350px; /* Aumenté un poco la altura para que quepa el texto en inglés */
+    perspective: 1000px; /* Profundidad 3D */
+    cursor: pointer;
+}
+
+.tarjeta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* El giro al pasar el mouse */
+.tarjeta:hover .tarjeta-inner {
+    transform: rotateY(180deg);
+}
+
+/* --- 3. Caras (Frente y Atrás) --- */
+.cara-frente, .cara-atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Cara de la Imagen */
+.cara-frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cara del Texto */
+.cara-atras {
+    background: linear-gradient(to bottom right, #012544, #000428); /* Azul más oscuro estilo medieval */
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el nombre del caballero (Dorado y Grande) */
+.titulo-dorado {
+    font-family: 'Cinzel', serif; /* Fuente medieval */
+    color: #D4AF37; /* Color Dorado */
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px #000000; /* Sombra para que resalte */
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
