@@ -344,3 +344,10 @@ footer p{
     width: auto;
 
 }
+
+#temu{
+    left: 30px;
+    font-weight: 900;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
