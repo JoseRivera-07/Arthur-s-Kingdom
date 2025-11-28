@@ -1,0 +1,104 @@
+/* --------------------------
+   FUENTES MEDIEVALES
+---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
+
+/* --------------------------
+   ESTILO GENERAL
+---------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cardo', serif;
+    background: #f6ead0; /* pergamino claro */
+    color: #3a2f1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 80px 20px;
+}
+
+/* --------------------------
+   HEADER MERLIN
+---------------------------*/
+.header-merlin {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(247, 240, 221, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.header-merlin h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 42px;
+    color: #3a2f1b;
+    text-shadow: 0 0 12px rgba(255, 215, 100, 0.8);
+}
+
+/* --------------------------
+   CONTENIDO
+---------------------------*/
+.merlin-content {
+    width: 90%;
+    max-width: 900px;
+    background: #f7f0dd;
+    border: 3px solid rgba(212, 175, 95, 0.5);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(184, 145, 75, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* --------------------------
+   BOTÓN DE REGRESO
+---------------------------*/
+.btn-back {
+    text-decoration: none;
+    background: #f7f0dd;
+    color: #3a2f1b;
+    padding: 12px 30px;
+    border-radius: 12px;
+    border: 3px solid rgba(212, 175, 95, 0.5);
+    box-shadow: 0 0 15px rgba(184, 145, 75, 0.4);
+    font-family: 'Cardo', serif;
+    font-size: 16px;
+    align-self: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(233, 200, 120, 0.7),
+                0 0 12px rgba(255, 225, 150, 0.8) inset;
+}
+
+/* --------------------------
+   RESPONSIVE
+---------------------------*/
+@media screen and (max-width: 768px) {
+    .header-merlin h1 {
+        font-size: 32px;
+    }
+
+    .merlin-content {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .btn-back {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}

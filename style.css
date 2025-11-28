@@ -1,353 +1,167 @@
-*{
+/* --------------------------
+   FUENTES MEDIEVALES
+---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
+
+/* --------------------------
+   ESTILO GENERAL
+---------------------------*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #555252;
-    color: azure;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: all;
+
+body {
+    font-family: 'Cardo', serif;
+    color: #3a2f1b;
+    background: #f6ead0; /* color pergamino claro */
+    padding-bottom: 80px;
 }
-#person{
-    background-color: #79543e;
-    color: azure;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: auto;
+
+/* --------------------------
+   HEADER PRINCIPAL
+---------------------------*/
+header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(246, 234, 208, 0.85); /* fondo transparente pergamino */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
-img{
-    position: absolute;
-    width: 380px;
-    height: 380px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
+
+header h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 42px;
+    color: #3a2f1b;
+    text-shadow: 0 0 12px rgba(255, 215, 100, 0.8);
+    margin-bottom: 15px;
 }
-#image{
-    background-color: #A9A9A9;
-    border-radius: 10px;
-    width: 400px;
-    height: 400px;
-    position: relative;
-    left: 47px;
-    top: 20px;
-}
-#card{
-    width: 500px;
-    position: absolute;
-    height: 600px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 40px;
-}
-h1{
-    position: relative;
-    top: 50px;
-    font-size: 35px;
-}
-#phrase{
-    position: relative;
-    top: 90px;
-    left: 70px;
+
+header p#temu {
     font-size: 20px;
-    width: 400px;
+    color: #3a2f1b;
+    font-style: italic;
 }
-#Him\ history{
-    width: 1200px;
-    height: 500px;
-    background-color: #402A22;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 150px;
-    position: relative;
-    left: 250px;
-}
-#text{
-    position: relative;
-    top: 20px;
-    font-size: 20px;
-    width: 1100px;
-    left: 50px;
-}
-#nav{
-    width: 1200px;
-    height: 50px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 30px;
-    position: relative;
-    left: 250px;
+
+/* --------------------------
+   CONTENEDOR DE TARJETAS
+---------------------------*/
+.cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 100px;
+    gap: 30px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
 }
-a{
-    color: azure;
+
+/* --------------------------
+   TARJETAS MEDIEVALES
+---------------------------*/
+.card {
+    width: 280px;
+    background: #f7f0dd;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid rgba(212, 175, 95, 0.5); /* borde dorado suave */
+    box-shadow: 0 0 20px rgba(184, 145, 75, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px rgba(233, 200, 120, 0.7),
+                0 0 12px rgba(255, 225, 150, 0.8) inset;
+}
+
+.card-image {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    background: #fff4e0;
+    border-radius: 14px;
+    border: 3px solid rgba(200, 150, 60, 0.6);
+    box-shadow: inset 0 0 12px rgba(80, 60, 25, 0.4);
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 26px;
+    margin: 10px 0;
+    color: #3a2f1b;
+}
+
+.card h1 a {
     text-decoration: none;
-    font-size: 20px;
+    color: #3a2f1b;
 }
-a:hover{
+
+.card h1 a:hover {
     text-decoration: underline;
 }
-footer{
-    width: 1200px;
-    height: 50px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 30px;
-    position: relative;
-    left: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.card p {
+    font-size: 16px;
+    color: #3a2f1b;
 }
-header{
-    width: auto;
-    height: 450px;
-    background-image: #402A22;
-    margin: auto;
-    position: relative;
-    background-image: url(fond.png);
-    background-size: cover;      
-    background-repeat: no-repeat; 
-    background-position: center; 
-}
-header h1{
+
+/* --------------------------
+   FOOTER
+---------------------------*/
+footer#foter {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(246, 234, 208, 0.85);
+    border-radius: 15px;
     text-align: center;
-    top: 150px;
-    font-size: 40px;
-}
-header p{
-    position: relative;
-    top: 170px;
-    left: 450px;
-    font-size: 20px;       
-    width: 400px;
-} 
-#main{
-    width: 250px;
-    position: absolute;
-    height: 400px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 20px;
-    top: 500px;
-}                        
-#image2{
-    background-color: #1c3042;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    left: 27px;
-    top: 20px;
-}
-#main img{
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
-}
-#main h1{
-    position: relative;
-    top: 50px;
-    left: 35px;
-    font-size: 25px;
-}
-#main p{
-    position: relative;
-    top: 70px;
-    left: 20px;
-    font-size: 15px;
-    width: 210px;
-}
-#main2{
-    width: 250px;
-    position: absolute;
-    height: 400px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 300px;
-    top: 500px;
-}                        
-#image3{
-    background-color: #1c3042;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    left: 27px;
-    top: 20px;
-}
-#main2 img{ 
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
-}
-#main2 h1{
-    position: relative;
-    top: 50px;
-    left: 35px;
-    font-size: 25px;
-}
-#main2 p{
-    position: relative;
-    top: 70px;
-    left: 20px;
-    font-size: 15px;
-    width: 210px;
-}       
-#main3{
-    width: 250px;
-    position: absolute;
-    height: 400px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 580px;
-    top: 500px;
-}                        
-#image4{
-    background-color: #1c3042;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    left: 27px;
-    top: 20px;
-}
-#main3 img{ 
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
-}
-#main3 h1{
-    position: relative;
-    top: 50px;
-    left: 35px;
-    font-size: 25px;
-}
-#main3 p{
-    position: relative;
-    top: 70px;
-    left: 20px;
-    font-size: 15px;
-    width: 210px;
-}   
-#main4{
-    width: 250px;
-    position: absolute;
-    height: 400px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 860px;
-    top: 500px;
-}                        
-#image5{
-    background-color: #1c3042;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    left: 27px;
-    top: 20px;
-}
-#main4 img{ 
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
-}
-#main4 h1{
-    position: relative;
-    top: 50px;
-    left: 35px;
-    font-size: 25px;
-}
-#main4 p{
-    position: relative;
-    top: 70px;  
-    left: 20px;
-    font-size: 15px;
-    width: 210px;
-}
-#main5{
-    width: 250px;
-    position: absolute;
-    height: 400px;
-    background-color: black;
-    border-radius: 10px;
-    margin: auto;
-    left: 1140px;
-    top: 500px;
-}
-#image6{
-    background-color: #1c3042;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    left: 27px;
-    top: 20px;
-}
-#main5 img{ 
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-    left: 10px;
-    border-radius: 10px;
-}
-#main5 h1{
-    position: relative;
-    top: 50px;
-    left: 35px;
-    font-size: 25px;
-}
-#main5 p{
-    position: relative;
-    top: 70px;  
-    left: 20px;
-    font-size: 15px;
-    width: 210px;
-}  
-footer p{
-    color: azure;
-    font-size: 20px;
-}                       
-
-#personal{
-    left: 35px;
+    border-top: 2px solid rgba(212, 175, 95, 0.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-#foter{
-    border-radius: 0px;
-    left: 0px;
-    margin-top: 800px;
-    width: auto;
-
+footer#foter p {
+    font-family: 'Cardo', serif;
+    color: #3a2f1b;
+    margin: 5px 0;
+    font-size: 16px;
 }
 
-#temu{
-    left: 30px;
-    font-weight: 900;
-    font-size: 30px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+/* --------------------------
+   RESPONSIVE
+---------------------------*/
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header p#temu {
+        font-size: 18px;
+    }
+    .card {
+        width: 80%;
+    }
 }
