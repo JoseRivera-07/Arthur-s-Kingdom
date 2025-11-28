@@ -1,0 +1,238 @@
+/* --------------------------
+   FUENTES MEDIEVALES
+---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
+
+/* --------------------------
+   ESTILO GENERAL
+---------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cardo', serif;
+    color: #3a2f1b;
+    background: #f6ead0;
+    padding-bottom: 80px;
+}
+
+/* --------------------------
+   HEADER MERLIN (CORREGIDO)
+---------------------------*/
+.header-merlin {
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: rgba(246, 234, 208, 0.90);
+    border-radius: 25px;
+    box-shadow: 
+        0 8px 28px rgba(0,0,0,0.18),
+        0 0 40px rgba(233, 200, 120, 0.70);
+    
+    /* Altura fija solicitada */
+    height: 200px;
+
+    /* Para centrar todo verticalmente */
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TÍTULO DEL HEADER */
+.header-merlin h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 50px;
+    color: #3a2f1b;
+    text-shadow: 
+        0 0 12px rgba(255, 215, 100, 0.85),
+        0 0 22px rgba(255, 200, 120, 0.6);
+
+    /* Para que se mantenga centrado verticalmente sin moverse */
+    line-height: 1;
+}
+
+/* --------------------------
+   IMAGEN DEL HEADER (250px)
+---------------------------*/
+.header-image-box {
+    width: 200px;
+    height: 200px;
+    background: #fff4e0;
+    border-radius: 20px;
+    border: 4px solid rgba(212, 175, 95, 0.7);
+    box-shadow: 
+        inset 0 0 18px rgba(80, 60, 25, 0.45),
+        0 0 25px rgba(233, 200, 120, 0.9);
+    overflow: hidden;
+
+    /* Permite que la imagen sobresalga del header sin romperlo visualmente */
+    margin-top: -25px; /* Ajuste para que se vea centrada */
+}
+
+.header-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* --------------------------
+   CONTENEDOR DE TEXTO FLOTANTE
+---------------------------*/
+.merlin-content {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(246, 234, 208, 0.95);
+    padding: 35px 45px;
+    border-radius: 18px;
+    border: 3px solid rgba(212, 175, 95, 0.5);
+    position: relative;
+
+    /* EFECTO DE FLOTACIÓN */
+    transform: translateY(0px);
+    box-shadow:
+        0 0 35px rgba(233, 200, 120, 0.7),   /* brillo dorado exterior */
+        0 10px 25px rgba(0, 0, 0, 0.2);      /* sombra flotante */
+}
+
+.merlin-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #3a2f1b;
+}
+
+/* --------------------------
+   BOTÓN REGRESAR
+---------------------------*/
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'MedievalSharp', serif;
+    background: #f7f0dd;
+    color: #3a2f1b;
+    border: 3px solid rgba(212, 175, 95, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(184, 145, 75, 0.35);
+    transition: 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #fff4e0;
+    box-shadow:
+        0 0 25px rgba(233, 200, 120, 0.7),
+        0 0 12px rgba(255, 225, 150, 0.8) inset;
+    transform: scale(1.05);
+}
+
+/* --------------------------
+   RESPONSIVE
+---------------------------*/
+@media screen and (max-width: 768px) {
+    
+    .header-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-merlin h1 {
+        font-size: 32px;
+    }
+
+    .header-image-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .merlin-content {
+        padding: 25px;
+    }
+}
+/* --------------------------
+   MARCO MEDIEVAL DECORATIVO
+---------------------------*/
+
+.merlin-content {
+    position: relative;
+    border: 4px solid rgba(180, 130, 60, 0.55);
+    border-radius: 20px;
+
+    /* marco doble */
+    box-shadow:
+        0 0 0 6px rgba(246, 234, 208, 0.9),
+        0 0 40px rgba(233, 200, 120, 0.7),
+        0 0 20px rgba(184, 145, 75, 0.5) inset;
+}
+
+/* Detalles en las esquinas */
+.merlin-content::before,
+.merlin-content::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(212, 175, 95, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(233, 200, 120, 0.8);
+}
+
+.merlin-content::before {
+    top: -12px;
+    left: -12px;
+}
+
+.merlin-content::after {
+    bottom: -12px;
+    right: -12px;
+}
+/* --------------------------
+   RUNAS BRILLANTES
+---------------------------*/
+
+.runes {
+    font-family: 'MedievalSharp', serif;
+    color: rgba(255, 223, 120, 0.9);
+    font-size: 22px;
+    margin-top: 10px;
+    letter-spacing: 6px;
+    text-shadow:
+        0 0 8px rgba(255, 215, 100, 0.9),
+        0 0 15px rgba(255, 200, 80, 0.8);
+    animation: runes-glow 3.5s infinite ease-in-out;
+}
+
+@keyframes runes-glow {
+    0% {
+        opacity: 0.7;
+        text-shadow:
+            0 0 5px rgba(255, 215, 100, 0.8),
+            0 0 10px rgba(255, 180, 50, 0.6);
+    }
+    50% {
+        opacity: 1;
+        text-shadow:
+            0 0 12px rgba(255, 230, 150, 1),
+            0 0 25px rgba(255, 210, 120, 0.9);
+    }
+    100% {
+        opacity: 0.7;
+        text-shadow:
+            0 0 5px rgba(255, 215, 100, 0.8),
+            0 0 10px rgba(255, 180, 50, 0.6);
+    }
+}
