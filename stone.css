@@ -1,66 +1,178 @@
+/* --------------------------
+   FUENTES MEDIEVALES
+---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
 
-body{
-    box-sizing: border-box;
+/* --------------------------
+   ESTILO GENERAL
+---------------------------*/
+* {
     margin: 0;
-    background-color: #1c3042;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.title{
-    margin: 0;
-    margin-top: 0;
-    background-image: url("espada_piedra.png");
-    background-size: cover;
-    background-position: center;
-    height: 220px;
+body {
+    font-family: 'Cinzel', serif;
+    background: #f6ead0; /* pergamino claro */
+    color: #3a2f1b;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* --------------------------
+   CONTENEDOR DEL TÍTULO
+---------------------------*/
+.title {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(246, 234, 208, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    position: relative;
+}
+
+.title h1 {
+    font-size: 42px;
+    color: #3a2f1b;
+    text-shadow: 0 0 12px rgba(212, 175, 95, 0.8);
+    margin-top: 15px;
+}
+
+.button {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    background: #f7f0dd;
+    border: 2px solid rgba(212, 175, 95, 0.7);
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button a {
+    text-decoration: none;
+    color: #3a2f1b;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212,175,95,0.6);
+}
+
+/* --------------------------
+   CONTENEDOR PRINCIPAL
+---------------------------*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.parag {
+    flex: 1 1 500px;
+    background: #f7f0dd;
+    border: 2px solid rgba(212, 175, 95, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(212,175,95,0.3);
+}
+
+.parag p {
+    font-size: 18px;
+    color: #3a2f1b;
+}
+
+/* --------------------------
+   IMAGEN DEL SWORD
+---------------------------*/
+.picture {
+    flex: 1 1 400px;
+    height: 400px;
+    background: url('espada_piedra.png') center/cover no-repeat;
+    border-radius: 16px;
+    border: 2px solid rgba(212, 175, 95, 0.5);
+    box-shadow: 0 0 15px rgba(212,175,95,0.3);
+}
+
+/* --------------------------
+   CURIOSIDADES
+---------------------------*/
+.curiosities {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.curiosities h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    color: #3a2f1b;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(212,175,95,0.6);
     margin-bottom: 20px;
 }
-h1{
-    margin: auto;
-    padding-top: 70px;
-    color: white;
-    text-align: center ;
-    font-size: 3rem;
-}
-.paragraph{
-    display: grid;
-    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
-    gap: 10px;
-    margin: auto;
-    gap: 10px;
-    padding: 10px;
-    margin: auto;
-    width: 50%;
-    background-color: #f5a524;
-    border-radius: 10px;
-}
-.parag, picture{
-    padding: 20px;
-    text-align: center;
+
+.curiosities details {
+    background: #f7f0dd;
+    border-radius: 12px;
+    border: 2px solid rgba(212, 175, 95, 0.5);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 12px rgba(212,175,95,0.3);
+    cursor: pointer;
 }
 
-p{
-    padding-top: auto;
-    margin: auto;
-    text-align: justify;
-    font-size: 1.5rem;
+.curiosities summary {
+    font-weight: 700;
+    font-size: 18px;
+    color: #3a2f1b;
+    outline: none;
 }
 
-.picture{
-    padding: 20PX;
-    background-image: url("unnamed.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    
-}
-.picture::after {
-    
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0);
-    transition: background 0.3s;
+.container-2 {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3a2f1b;
 }
 
-.picture:hover::after {
-    background: rgba(0,0,0,0.4);
+/* --------------------------
+   RESPONSIVE
+---------------------------*/
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .parag, .picture {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title h1 {
+        font-size: 32px;
+    }
+
+    .parag p, .container-2 {
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
