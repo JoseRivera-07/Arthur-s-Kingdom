@@ -1,32 +1,90 @@
-/* --- styles.css --- */
+/* --------------------------
+   FUENTES MEDIEVALES
+---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
 
-/* Importamos la fuente elegante para los títulos */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Segoe+UI&display=swap');
-
-/* --- 1. Estilos Generales --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111f2bfd; /* Fondo oscuro */
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+/* --------------------------
+   ESTILO GENERAL
+---------------------------*/
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Cardo', serif;
+    color: #3a2f1b;
+    background: #f6ead0; /* color pergamino claro */
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------------------
+   HEADER CABALLEROS
+---------------------------*/
+.header-caballeros {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(246, 234, 208, 0.95); /* fondo pergamino */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-caballeros h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 42px;
+    color: #3a2f1b;
+    text-shadow: 0 0 12px rgba(255, 215, 100, 0.8);
+}
+
+.btn-regreso {
+    text-decoration: none;
+    background: #f7f0dd;
+    color: #3a2f1b;
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: 3px solid rgba(212, 175, 95, 0.5);
+    box-shadow: 0 0 15px rgba(184, 145, 75, 0.4);
+    font-family: 'Cardo', serif;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-regreso:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(233, 200, 120, 0.7),
+                0 0 12px rgba(255, 225, 150, 0.8) inset;
+}
+
+/* --------------------------
+   CONTENEDOR DE TARJETAS
+---------------------------*/
 .contenedor {
     display: grid;
-    /* Rejilla automática */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 30px; 
-    width: 100%;
-    max-width: 1200px;
+    gap: 30px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
 }
 
-/* --- 2. Estructura de la Tarjeta --- */
+/* --------------------------
+   TARJETAS MEDIEVALES 3D
+---------------------------*/
 .tarjeta {
     background-color: transparent;
-    height: 350px; /* Aumenté un poco la altura para que quepa el texto en inglés */
-    perspective: 1000px; /* Profundidad 3D */
+    height: 350px;
+    perspective: 1000px;
     cursor: pointer;
 }
 
@@ -37,37 +95,37 @@ body {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 16px;
 }
 
-/* El giro al pasar el mouse */
 .tarjeta:hover .tarjeta-inner {
     transform: rotateY(180deg);
 }
 
-/* --- 3. Caras (Frente y Atrás) --- */
+/* --------------------------
+   CARAS DE LA TARJETA
+---------------------------*/
 .cara-frente, .cara-atras {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
 }
 
-/* Cara de la Imagen */
+/* CARA DE IMAGEN */
 .cara-frente img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 14px;
 }
 
-/* Cara del Texto */
+/* CARA POSTERIOR CON BRILLO */
 .cara-atras {
-    background: linear-gradient(to bottom right, #012544, #000428); /* Azul más oscuro estilo medieval */
-    color: white;
+    background: linear-gradient(to bottom right, #f7f0dd, #e8d9b7);
+    color: #3a2f1b;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -75,19 +133,46 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    border: 3px solid rgba(212, 175, 95, 0.5); /* borde dorado suave */
+    box-shadow: 0 0 20px rgba(184, 145, 75, 0.4);
 }
 
-/* Estilo para el nombre del caballero (Dorado y Grande) */
+/* TITULO DE CABALLERO */
 .titulo-dorado {
-    font-family: 'Cinzel', serif; /* Fuente medieval */
-    color: #D4AF37; /* Color Dorado */
+    font-family: 'MedievalSharp', serif;
+    color: #D4AF37;
     font-size: 26px;
     margin-bottom: 10px;
-    margin-top: 0;
-    text-shadow: 2px 2px 4px #000000; /* Sombra para que resalte */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
+/* TEXTO */
 p {
     font-size: 14px;
     line-height: 1.5;
+    text-align: center;
+}
+
+/* --------------------------
+   RESPONSIVE
+---------------------------*/
+@media screen and (max-width: 1024px) {
+    .contenedor {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-caballeros h1 {
+        font-size: 32px;
+    }
+
+    .btn-regreso {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .tarjeta {
+        height: 300px;
+    }
 }
