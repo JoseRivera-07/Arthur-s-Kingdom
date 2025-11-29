@@ -48,8 +48,8 @@ _Defines the visible title of the `<details>`, functioning as the header that th
 
 ## Brief explanation (2–4 lines) of how they organized the work with branches
 
-_We divided the work into sections. We chose the story of King Arthur and assigned parts: one person worked on the story of King Arthur, another on the sword in the stone, another on the round table, another on Merlin the wizard, in addition to the person who created the main page and the person who wrote the README.md. Each part was developed in a different branch to avoid conflicts._
-
+-Dividimos el trabajo en secciones. Elegimos la historia del rey Arturo y asignamos las partes: una persona trabajó en la historia del rey Arturo (Jose Rivera), otra en la espada en la piedra (Danna Oyola), otra en la mesa redonda (Sergio Ospina y Valentina Duque, otra en el mago Merlín (Samuel Vanegas), además de la persona que creó la página principal
+(Jose Rivera) y la persona que escribió el README.md.(Danna Oyola) Cada parte se desarrolló en una rama diferente para evitar conflictos.
 ---
 
 ## Enlace del proyecto
