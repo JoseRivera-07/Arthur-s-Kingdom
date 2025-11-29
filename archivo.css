@@ -1,34 +1,35 @@
-/* --------------------------
-   FUENTES MEDIEVALES
----------------------------*/
+/* ---------------------------------------------------
+   MEDIEVAL FONTS IMPORTED FROM GOOGLE FONTS
+   Used to give the project an old parchment vibe.
+----------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
 
-/* --------------------------
-   ESTILO GENERAL
----------------------------*/
+/* ---------------------------------------------------
+   GENERAL RESET AND BASE PAGE STYLES
+----------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Prevents padding from changing total size */
 }
 
 body {
     font-family: 'Cardo', serif;
     color: #3a2f1b;
-    background: #f6ead0; /* color pergamino claro */
+    background: #f6ead0; /* Light parchment color */
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* --------------------------
-   HEADER CABALLEROS
----------------------------*/
+/* ---------------------------------------------------
+   MAIN HEADER FOR THE KNIGHTS SECTION
+----------------------------------------------------*/
 .header-caballeros {
     width: 90%;
     max-width: 1200px;
-    background: rgba(246, 234, 208, 0.95); /* fondo pergamino */
+    background: rgba(246, 234, 208, 0.95);
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     padding: 30px;
@@ -47,6 +48,7 @@ body {
     text-shadow: 0 0 12px rgba(255, 215, 100, 0.8);
 }
 
+/* Return button that takes the user back */
 .btn-regreso {
     text-decoration: none;
     background: #f7f0dd;
@@ -66,9 +68,9 @@ body {
                 0 0 12px rgba(255, 225, 150, 0.8) inset;
 }
 
-/* --------------------------
-   CONTENEDOR DE TARJETAS
----------------------------*/
+/* ---------------------------------------------------
+   MAIN GRID THAT HOLDS ALL KNIGHT CARDS
+----------------------------------------------------*/
 .contenedor {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -78,16 +80,17 @@ body {
     margin: 40px auto;
 }
 
-/* --------------------------
-   TARJETAS MEDIEVALES 3D
----------------------------*/
+/* ---------------------------------------------------
+   3D ROTATION CARDS
+----------------------------------------------------*/
 .tarjeta {
     background-color: transparent;
     height: 350px;
-    perspective: 1000px;
+    perspective: 1000px; /* Depth for 3D flip effect */
     cursor: pointer;
 }
 
+/* Inner box that rotates */
 .tarjeta-inner {
     position: relative;
     width: 100%;
@@ -98,13 +101,14 @@ body {
     border-radius: 16px;
 }
 
+/* Flip on hover */
 .tarjeta:hover .tarjeta-inner {
     transform: rotateY(180deg);
 }
 
-/* --------------------------
-   CARAS DE LA TARJETA
----------------------------*/
+/* ---------------------------------------------------
+   CARD FRONT AND BACK FACES
+----------------------------------------------------*/
 .cara-frente, .cara-atras {
     position: absolute;
     width: 100%;
@@ -114,7 +118,7 @@ body {
     overflow: hidden;
 }
 
-/* CARA DE IMAGEN */
+/* Front image */
 .cara-frente img {
     width: 100%;
     height: 100%;
@@ -122,7 +126,7 @@ body {
     border-radius: 14px;
 }
 
-/* CARA POSTERIOR CON BRILLO */
+/* Back face with golden glow */
 .cara-atras {
     background: linear-gradient(to bottom right, #f7f0dd, #e8d9b7);
     color: #3a2f1b;
@@ -132,12 +136,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box;
-    border: 3px solid rgba(212, 175, 95, 0.5); /* borde dorado suave */
+    border: 3px solid rgba(212, 175, 95, 0.5);
     box-shadow: 0 0 20px rgba(184, 145, 75, 0.4);
 }
 
-/* TITULO DE CABALLERO */
+/* Golden medieval title */
 .titulo-dorado {
     font-family: 'MedievalSharp', serif;
     color: #D4AF37;
@@ -146,16 +149,16 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-/* TEXTO */
+/* Description text */
 p {
     font-size: 14px;
     line-height: 1.5;
     text-align: center;
 }
 
-/* --------------------------
-   RESPONSIVE
----------------------------*/
+/* ---------------------------------------------------
+   RESPONSIVE SETTINGS FOR TABLETS AND PHONES
+----------------------------------------------------*/
 @media screen and (max-width: 1024px) {
     .contenedor {
         gap: 20px;
