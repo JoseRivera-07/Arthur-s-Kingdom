@@ -8,7 +8,16 @@
 
 ## Brief description of the world
 
-_The story is set in the medieval world of King Arthur._
+
+-This project was created with the idea of bringing the story of the Knights of the Round Table to life in a visual, simple, and engaging way. Through a set of interactive cards, each knight reveals their image and story when flipped, offering an experience that blends curiosity, design, and a touch of medieval magic.
+The main goal was to learn and practice HTML and CSS concepts—especially 3D effects, custom styling, and responsive design—while also enjoying the creative process: choosing warm colors, old-style fonts, and golden details that reflect the essence of Camelot.
+More than just a web page, this project is a small tribute to the legends that continue to capture our imagination, and an opportunity to grow as a developer while building something that looks good and feels meaningful.
+
+
+
+
+
+
 
 ---
 
@@ -48,7 +57,7 @@ _Defines the visible title of the `<details>`, functioning as the header that th
 
 ## Brief explanation (2–4 lines) of how they organized the work with branches
 
-- We divided the work into sections. We chose the story of King Arthur and assigned each part: one person worked on the story of King Arthur (Jose Rivera), another on the Sword in the Stone (Danna Oyola), another on the Round Table (Sergio Ospina and Valentina Duque), another on the wizard Merlin (Samuel Vanegas), as well as the person who created the main page (Jose Rivera) and the person who wrote the README.md (Danna Oyola). Each part was developed in a separate branch to avoid conflicts.
+- We divided the work into sections. We chose the story of King Arthur and assigned each part: one person worked on the story of King Arthur (Jose Rivera), another on the Sword in the Stone (Danna Oyola), another on the Round Table Sergio Ospina idea of ​​making the cards spinners and Valentina took charge of the story, another on the wizard Merlin (Samuel Vanegas), as well as the person who created the main page (Jose Rivera) and the person who wrote the README.md (Danna Oyola). Each part was developed in a separate branch to avoid conflicts.
 ---
 
 ## Project Link
