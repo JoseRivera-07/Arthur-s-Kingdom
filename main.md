@@ -48,10 +48,10 @@ _Defines the visible title of the `<details>`, functioning as the header that th
 
 ## Brief explanation (2–4 lines) of how they organized the work with branches
 
--Dividimos el trabajo en secciones. Elegimos la historia del rey Arturo y asignamos las partes: una persona trabajó en la historia del rey Arturo (Jose Rivera), otra en la espada en la piedra (Danna Oyola), otra en la mesa redonda (Sergio Ospina y Valentina Duque), otra en el mago Merlín (Samuel Vanegas), además de la persona que creó la página principal
-(Jose Rivera) y la persona que escribió el README.md.(Danna Oyola) Cada parte se desarrolló en una rama diferente para evitar conflictos.
+- We divided the work into sections. We chose the story of King Arthur and assigned each part: one person worked on the story of King Arthur (Jose Rivera), another on the Sword in the Stone (Danna Oyola), another on the Round Table (Sergio Ospina and Valentina Duque), another on the wizard Merlin (Samuel Vanegas), as well as the person who created the main page (Jose Rivera) and the person who wrote the README.md (Danna Oyola). Each part was developed in a separate branch to avoid conflicts.
 ---
 
-## Enlace del proyecto
+## Project Link
+
 
 [Link to the site at GitHub Pages](https://joserivera-07.github.io/Arthur-s-Kingdom/)
