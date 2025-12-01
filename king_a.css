@@ -1,10 +1,10 @@
 /* --------------------------
-   FUENTES MEDIEVALES
+   Before defining the medieval fonts, this section imports two typefaces from Google Fonts. These fonts give the entire layout a thematic, old-manuscript aesthetic that matches the medieval style of the design.
 ---------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cardo:wght@400;700&display=swap');
 
 /* --------------------------
-   ESTILO GENERAL
+   This next section sets the general foundation for the styling. It removes default spacing, applies the main parchment-like background, and ensures that all elements behave consistently in terms of sizing. The body is centered and uses the chosen serif font to reinforce the medieval theme.
 ---------------------------*/
 * {
     margin: 0;
@@ -15,7 +15,7 @@
 body {
     font-family: 'Cardo', serif;
     color: #3a2f1b;
-    background: #f6ead0; /* color pergamino claro */
+    background: #f6ead0; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@ body {
 }
 
 /* --------------------------
-   TARJETA PRINCIPAL
+   Here begins the styling for the main card displayed on the screen. This section defines the container where the card will sit and the visual appearance of the card itself, including soft borders, shadow effects, and hover animations that create a subtle “magical scroll” feeling.
 ---------------------------*/
 .cards-container {
     width: 90%;
@@ -51,7 +51,7 @@ body {
                 0 0 12px rgba(255, 225, 150, 0.8) inset;
 }
 
-/* IMAGEN */
+/* The card image section defines the space where an illustration or themed picture will appear. The border and inner shadow make it feel like framed artwork inside a medieval book or scroll. */
 .card-image {
     width: 100%;
     height: 300px;
@@ -69,7 +69,7 @@ body {
     border-radius: 12px;
 }
 
-/* TITULO TARJETA */
+/* This section styles the card’s title. It uses the more decorative medieval font, giving the heading a handwritten storybook appearance, complemented by size and color that help it stand out. */
 .card h1 {
     font-family: 'MedievalSharp', serif;
     font-size: 32px;
@@ -77,7 +77,7 @@ body {
     color: #3a2f1b;
 }
 
-/* TEXTO TARJETA */
+/* The paragraph styling inside the card ensures good readability. The text is justified, has comfortable spacing, and retains the parchment-like color to keep the ancient theme cohesive. */
 .card p {
     font-size: 16px;
     color: #3a2f1b;
@@ -87,7 +87,7 @@ body {
 }
 
 /* --------------------------
-   HISTORIA DE ARTHUR
+   This section handles the historical content block. It recreates the feel of an old parchment panel, adding shadows, borders, and smooth spacing to make it look like a standalone chapter or lore entry.
 ---------------------------*/
 #Him-history {
     width: 90%;
@@ -104,7 +104,7 @@ body {
 }
 
 /* --------------------------
-   NAVEGACIÓN
+   The navigation section creates simple, centered medieval-style buttons. Their colors, borders, and hover effects give the impression of ornate labels or tags one might find in an old codex.
 ---------------------------*/
 #nav {
     width: 90%;
@@ -133,7 +133,7 @@ body {
 }
 
 /* --------------------------
-   FOOTER
+   The footer section wraps up the page with a clean, centered block that matches the rest of the theme. It uses gentle shadows and soft tones to keep the visual experience consistent and calm.
 ---------------------------*/
 footer {
     width: 90%;
@@ -155,7 +155,7 @@ footer p {
 }
 
 /* --------------------------
-   RESPONSIVE
+   Finally, this section ensures that the design remains readable on smaller screens. Text sizes and padding are slightly reduced to maintain visual balance without losing the medieval aesthetic.
 ---------------------------*/
 @media screen and (max-width: 768px) {
     .card h1 {
